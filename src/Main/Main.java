@@ -26,19 +26,14 @@ public class Main extends Application {
      Stage stage;
     @Override
     public void start(Stage primaryStage) throws IOException {
-           this.stage=primaryStage;
-           mainWindow();
-    }
-    public void mainWindow() throws IOException{
+        this.stage=primaryStage;
         FXMLLoader loder=new FXMLLoader(Main.class.getResource("../View/MainWindow.fxml"));
         AnchorPane pane=loder.load();
         Scene scene=new Scene(pane);
-        stage.setResizable(false);
-        
-        stage.setTitle("Color Picker");
         stage.setScene(scene);
         stage.show();
     }
+
     /**
      * @param args the command line arguments
      */

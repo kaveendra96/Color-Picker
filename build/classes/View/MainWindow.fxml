@@ -7,18 +7,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane id="AnchorPane" prefHeight="298.0" prefWidth="281.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Controller.MainWindowController">
+<AnchorPane id="AnchorPane" prefHeight="309.0" prefWidth="294.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainWindowController">
     <stylesheets>
         <URL value="@/css/mainwindow.css" />
     </stylesheets>
    <children>
-      <JFXButton layoutX="153.0" layoutY="73.0" style="-fx-background-color: #3689e6;" text="Pick Color" />
+      <JFXButton fx:id="btnColorPicker" layoutX="165.0" layoutY="73.0" onMouseClicked="#colorPick" style="-fx-background-color: #3689e6;" text="Pick Color" />
       <Label layoutX="33.0" layoutY="171.0" text="Choose Color" />
-      <JFXColorPicker layoutX="142.0" layoutY="169.0" />
+      <JFXColorPicker fx:id="ccColor" layoutX="142.0" layoutY="169.0" />
       <Label layoutX="36.0" layoutY="211.0" text="rgba" />
-      <Label layoutX="143.0" layoutY="213.0" prefHeight="15.0" prefWidth="100.0" text="rgba(0,0,0,0)" />
-      <Pane layoutX="28.0" layoutY="33.0" prefHeight="104.0" prefWidth="100.0" style="-fx-background-color: yellow; -fx-background-radius: 100%; -fx-border-radius: 100px;" />
+      <Label fx:id="lblRGBA" layoutX="143.0" layoutY="213.0" prefHeight="15.0" prefWidth="100.0" text="rgba(0,0,0,0)" />
+      <Pane fx:id="colorPane" layoutX="28.0" layoutY="33.0" prefHeight="104.0" prefWidth="100.0" style="-fx-background-color: yellow; -fx-background-radius: 100%; -fx-border-radius: 100px;" />
       <Label layoutX="34.0" layoutY="243.0" text="Hex Value" />
-      <Label layoutX="143.0" layoutY="245.0" text="#f030d" />
+      <Label fx:id="lblHex" layoutX="143.0" layoutY="245.0" text="#f030d" />
    </children>
 </AnchorPane>
